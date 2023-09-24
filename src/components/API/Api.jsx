@@ -8,6 +8,7 @@ const resourceApi = resource => {
     getAll: () => api.get(`/${resource}`),
     get: id => api.get(`/${resource}/${id}`),
     create: data => api.post(`/${resource}`, data),
+    update: (id, data) => api.put(`/${resource}/${id}`, data),
     delete: id => api.delete(`/${resource}/${id}`),
   };
 };
